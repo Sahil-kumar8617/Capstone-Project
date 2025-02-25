@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind-Care</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        text-align: center;
+      }
+
+      .hero-section {
+        padding: 80px 20px;
+        background: url("https://media.istockphoto.com/id/494759164/photo/yoga-with-tibetan-bell.jpg?s=612x612&w=0&k=20&c=YYa6qT1D0iaKpx3e1hU5pEHFy1mbCRFmRuEHQKx0zVU=")
+          no-repeat center center/cover;
+        color: rgb(22, 21, 21);
+      }
+
+      .hero-section h2 {
+        font-size: 3em;
+        margin-bottom: 15px;
+      }
+
+      .hero-section p {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background: #171718;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: #39393a;
+      }
+
+      /* Health & Mind Care Section */
+      .health-mind-section {
+        background: #f9f9f9;
+        padding: 60px;
+        text-align: center;
+      }
+
+      .health-mind-content h2 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .health-mind-content p {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .health-mind-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .health-box,
+      .mind-box {
+        background: #ffffff;
+        padding: 30px;
+        width: 350px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .health-box h3,
+      .mind-box h3 {
+        font-size: 1.8em;
+        color: #212122;
+        margin-bottom: 10px;
+      }
+
+      .health-box ul,
+      .mind-box ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .health-box ul li,
+      .mind-box ul li {
+        font-size: 1.1em;
+        margin: 8px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .health-box ul li::before,
+      .mind-box ul li::before {
+        content: "✔";
+        color: #0d0d0e;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .health-mind-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+       /* Stress & Anxiety Section */
+       .stress-anxiety-section {
+        background: #f4f4f4;
+        padding: 60px;
+        text-align: center;
+      }
+
+      .stress-anxiety-content h2 {
+        font-size: 2.5em;
+        color: #2d3436;
+        margin-bottom: 15px;
+      }
+
+      .stress-anxiety-content p {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .stress-tips {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .stress-item {
+        background: #ffffff;
+        padding: 20px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .stress-item img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+      }
+
+      .stress-item h3 {
+        font-size: 1.5em;
+        color: #2c2a2a;
+        margin-top: 10px;
+      }
+
+      .stress-item p {
+        font-size: 1.1em;
+        color: #555;
+        margin-top: 5px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .stress-tips {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      /* Yoga Section */
+.yogai-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: #e8f5e9;
+    
+    border-radius: 10px;
+}
+
+.yogai-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.yogai-content h2 {
+    font-size: 2.5em;
+    color: #313335;
+    margin-bottom: 15px;
+}
+
+.yogai-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.yogai-content h3 {
+    font-size: 1.8em;
+    color: #1a1b1b;
+    margin-bottom: 10px;
+}
+
+.yogai-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.yogai-content ul li {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.yogai-content ul li::before {
+    color: #171818;
+    font-size: 1.2em;
+    position: absolute;
+    left: 110px;
+}
+
+.yogai-image {
+    flex: 1;
+    text-align: center;
+}
+
+.yogai-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .yogai-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .yogai-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .yogai-content ul li {
+        padding-left: 0;
+    }
+
+    .yogai-content ul li::before {
+        display: none;
+    }
+}
+
+      /* Yoga for Mind Relaxation Section */
+      .yoga-section {
+        background: #f5f5f5;
+        padding: 60px;
+        text-align: center;
+      }
+
+      .yoga-content h2 {
+        font-size: 2.5em;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .yoga-content p {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .yoga-poses {
+        display: flex;
+        justify-content: center;
+        gap: 3;
+        flex-wrap: wrap;
+       
+      }
+
+      .yoga-item {
+        text-align: center;
+        width: 280px;
+        
+      }
+
+      .yoga-item img {
+        width: 250px;
+        height: 200px;
+        border-radius: 10px;
+        
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .yoga-item p {
+        font-size: 1.1em;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .yoga-poses {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <h2>Unlock Mental Wellness</h2>
+      <p>Strengthen your mind and embrace a stress-free, balanced life.</p>
+      <button class="btn-primary">Start Your Journey</button>
+    </div>
+
+    <!-- Health & Mind Care Section -->
+    <div class="health-mind-section">
+      <div class="health-mind-content">
+        <h2>Health & Mind Care</h2>
+        <p>
+          Taking care of both your body and mind is essential for a balanced and
+          fulfilling life.
+        </p>
+        <div class="health-mind-container">
+          <!-- Physical Health -->
+          <div class="health-box">
+            <h3>Physical Health</h3>
+            <ul>
+              <li>Exercise for at least 30 minutes daily</li>
+              <li>Eat a balanced diet with proteins, vitamins, and minerals</li>
+              <li>Stay hydrated and drink plenty of water</li>
+              <li>Get at least 7-8 hours of sleep</li>
+              <li>Maintain a proper posture to avoid back pain</li>
+            </ul>
+          </div>
+          <!-- Mental Wellness -->
+          <div class="mind-box">
+            <h3>Mental Wellness</h3>
+            <ul>
+              <li>Practice meditation and deep breathing</li>
+              <li>Take breaks and manage stress effectively</li>
+              <li>Stay connected with friends and family</li>
+              <li>Engage in hobbies and activities you enjoy</li>
+              <li>Seek professional help if needed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Overcoming Stress & Anxiety Section -->
+    <div class="stress-anxiety-section">
+      <div class="stress-anxiety-content">
+        <h2>Overcoming Stress & Anxiety in Today's World</h2>
+        <p>
+          Modern life is filled with stress, anxiety, and frustration. But with
+          the right approach, we can overcome these challenges and live a
+          peaceful life.
+        </p>
+        <div class="stress-tips">
+          <div class="stress-item">
+            <img
+              src="https://media.istockphoto.com/id/1311740272/photo/man-meditating-in-lotus-position.jpg?s=612x612&w=0&k=20&c=68FKmwjEU0q0NDTXCIWbI_Lb9QrJ7B0RePXN_ENQrxY="
+              alt="Meditation"
+            />
+            <h3>Meditation</h3>
+            <p>
+              Daily meditation helps reduce anxiety, increases focus, and brings
+              mental clarity.
+            </p>
+          </div>
+          <div class="stress-item">
+            <img
+              src="https://media.istockphoto.com/id/879180126/photo/picture-of-people-running-on-treadmill-in-gym.jpg?s=612x612&w=0&k=20&c=tib9Gcia2KkXmzPAgdFlyhsN3uBV0_7mMEpbJHObIaA="
+              alt="Exercise"
+            />
+            <h3>Regular Exercise</h3>
+            <p>
+              Physical activity releases endorphins, which improve mood and
+              reduce stress.
+            </p>
+          </div>
+          <div class="stress-item">
+            <img
+              src="https://media.istockphoto.com/id/2151244399/photo/happy-senior-couple-spending-leisure-time-in-park.jpg?s=612x612&w=0&k=20&c=Y9usXz064JB5FifSwa_20fU38RIbT7W5VGMprnxR15A="
+              alt="Social Connection"
+            />
+            <h3>Social Connection</h3>
+            <p>
+              Talking to friends and family provides emotional support and
+              reduces stress.
+            </p>
+          </div>
+          <div class="stress-item">
+            <img
+              src="https://media.istockphoto.com/id/1308574122/photo/fitness-woman-exercising-outdoors.jpg?s=612x612&w=0&k=20&c=qt-6sbKERJmS1m9fsZTdySkwfYF4P9Fpsbjdf4mStvE="
+              alt="Relaxation"
+            />
+            <h3>Relaxation & Hobbies</h3>
+            <p>
+              Engaging in hobbies like music, reading, or painting helps in
+              relaxation and creativity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Yoga Importance Section -->
+<div class="yogai-section">
+    <div class="yogai-content">
+        <h2>Importance of Yoga</h2>
+        <p>Yoga is a powerful practice that enhances both physical and mental well-being. It helps in stress reduction, improves flexibility, and promotes mindfulness.</p>
+        <h3>How Yoga Helps in Relaxing the Mind:</h3>
+        <ul>
+            <li>Reduces stress and anxiety</li>
+            <li>Enhances focus and concentration</li>
+            <li>Improves breathing and relaxation</li>
+            <li>Encourages mindfulness and inner peace</li>
+            <li>Boosts overall emotional balance</li>
+        </ul>
+    </div>
+    <div class="yogai-image">
+        <img src="https://media.istockphoto.com/id/502937834/photo/young-woman-practicing-yoga-on-the-beach-at-sunset.jpg?s=612x612&w=0&k=20&c=HoeripjoBnomphBj9Qsub4ZA2yLZx4qJD7kdtaPkq28=" alt="Yoga Relaxation">
+    </div>
+</div>
+
+    <!-- Yoga for Mind Relaxation Section -->
+    <div class="yoga-section">
+      <div class="yoga-content">
+        <h2>Yoga poses for Mind Relaxation</h2>
+        <p>
+          Yoga is a great way to relax your mind, relieve stress, and improve
+          mental clarity.
+        </p>
+        <div class="yoga-poses">
+          <div class="yoga-item">
+            <img
+              src="https://media.istockphoto.com/id/2186939075/photo/mid-adult-woman-doing-yoga-exercise-at-home-stock-photo.jpg?s=612x612&w=0&k=20&c=ZVtplqzBzs_qc4kwkw10Ckg6-A4wuyR-34HbZZ9vJ3U="
+              alt="Meditation Pose"
+            />
+            <p>
+              Meditation Pose (Sukhasana) - Focuses on deep breathing and
+              calmness
+            </p>
+          </div>
+          <div class="yoga-item">
+            <img
+              src="https://media.istockphoto.com/id/1457610783/photo/asian-housewife-doing-childs-pose-exercise-during-home-workout-female-practicing-yoga-in.jpg?s=612x612&w=0&k=20&c=bpN6sKgJ-Jz-ltPYIXi53jZM3MRAJ2WEC8jh-lhruMM="
+              alt="Child’s Pose"
+            />
+            <p>
+              Child’s Pose (Balasana) - Relieves stress and soothes the nervous
+              system
+            </p>
+          </div>
+          <div class="yoga-item">
+            <img
+              src="https://media.istockphoto.com/id/517339050/photo/woman-relaxes-in-yoga-asana-savasana-outdoors.jpg?s=612x612&w=0&k=20&c=UupW78kTYLTTpt_UVyMI9zyIYbOnq_7SJZbv9qGnQbY="
+              alt="Corpse Pose"
+            />
+            <p>
+              Corpse Pose (Savasana) - Helps in complete relaxation and mental
+              clarity
+            </p>
+          </div>
+          <div class="yoga-item">
+            <img
+              src="https://media.istockphoto.com/id/1309835028/photo/side-view-of-a-young-man-practicing-yoga-at-home-and-doing-a-standing-forward-bend-pose.jpg?s=612x612&w=0&k=20&c=A02eivducLbcniQ0VW9W72WBcpXQ92m2896PFhijP4k="
+              alt="Forward Bend"
+            />
+            <p>
+              Standing Forward Bend (Uttanasana) - Reduces anxiety and improves
+              blood flow
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

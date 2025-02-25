@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .section {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        .section img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Care & Wellness</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Physical Care</h2>
+            <img src="Pictures/PhysicalCare.webp" alt="Physical Care">
+            <p>Maintain your physical well-being through regular exercise, hygiene, and sleep.</p>
+        </div>
+        <div class="section">
+            <h2>Mental Health</h2>
+            <img src="Pictures/mindfulness.jpg" alt="Mental Health">
+            <p>Practice mindfulness, reduce stress, and take care of your emotional well-being.</p>
+        </div>
+        <div class="section">
+            <h2>Nutrition</h2>
+            <img src="Pictures/Diet.jpg" alt="Healthy Food">
+            <p>Eat a balanced diet with essential nutrients to keep your body and mind healthy.</p>
+        </div>
+        <div class="section">
+            <h2>Relaxation</h2>
+            <img src="Pictures/relax.jpg" alt="Relaxation">
+            <p>Take time to relax and unwind through activities like reading, yoga, or meditation.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 60%;
+        }
+        .section {
+            position: relative;
+            width: 48%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        .section img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .hover-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .section:hover .hover-text {
+            opacity: 1;
+        }
+        .thoughts {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            width: 80%;
+        }
+        .right-image {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+        }
+        .right-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mind & Wellness</h1>
+    <div class="content">
+        <div class="sections">
+            <div class="section">
+                <h2>Brain Exercises</h2>
+                <img src="Pictures/brain_excercise.jpg" alt="Brain Exercises">
+                <div class="hover-text">Boost cognitive function with puzzles, memory games, and problem-solving tasks.</div>
+            </div>
+            <div class="section">
+                <h2>Mindfulness & Meditation</h2>
+                <img src="Pictures/mindfulness.jpg" alt="Meditation">
+                <div class="hover-text">Practice deep breathing and mindfulness to reduce stress and improve focus.</div>
+            </div>
+            <div class="section">
+                <h2>Motivational Corner</h2>
+                <img src="Pictures/motivation.jpg" alt="Motivation">
+                <div class="hover-text">Stay inspired with powerful quotes and success stories.</div>
+            </div>
+            <div class="section">
+                <h2>Daily Journal</h2>
+                <img src="Pictures/journal.jpg" alt="Journal Writing">
+                <div class="hover-text">Write down your thoughts, goals, and progress to maintain mental clarity.</div>
+            </div>
+        </div>
+        <div class="right-image">
+            <img src="Pictures/Brain.jpg" alt="Mind & Wellness Theme">
+        </div>
+    </div>
+    <div class="thoughts">
+        <h2>Your Thoughts</h2>
+        <p>Share your reflections and experiences with us.</p>
+        <textarea rows="4" style="width: 100%; padding: 10px; border-radius: 5px;"></textarea>
+        <button style="margin-top: 10px; padding: 10px; background-color: white; color: black; border: none; cursor: pointer;">Submit</button>
+    </div>
+</body>
+</html>
