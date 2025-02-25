@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #fff;
+        }
+        .quote {
+            font-style: italic;
+            color: #ddd;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: gray;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Care & Wellness</h1>
+        
+        <div class="section">
+            <h2>Mental Health Support</h2>
+            <p>Practice mindfulness, meditation, and deep breathing exercises to reduce stress.</p>
+            <img src="Pictures/Mental.jpg" alt="Mental Health">
+        </div>
+        
+        <div class="section">
+            <h2>Diet & Nutrition</h2>
+            <p>Eat balanced meals and stay hydrated for optimal performance and recovery.</p>
+            <img src="Pictures/Diet.jpg" alt="Healthy Food">
+        </div>
+        
+        <div class="section">
+            <h2>Workout Recovery</h2>
+            <p>Include stretching and proper rest to prevent injuries and improve muscle growth.</p>
+            <img src="/Pictures/recovery.jpg" alt="Workout Recovery">
+        </div>
+        
+        <div class="section">
+            <h2>Motivational Quotes</h2>
+            <p class="quote">"Your body can stand almost anything. It’s your mind that you have to convince."</p>
+            <img src="Pictures/motivation.jpg" alt="Motivational Image">
+        </div>
+        
+        <div class="section">
+            <h2>Need Help?</h2>
+            <p>Share your concerns or ask a question:</p>
+            <input type="text" id="name" placeholder="Your Name">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    
+    <script>
+        function submitForm() {
+            let name = document.getElementById('name').value;
+            let message = document.getElementById('message').value;
+            if (name && message) {
+                alert('Thank you, ' + name + '! We will get back to you soon.');
+                document.getElementById('name').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
+</body>
+</html>
