@@ -453,57 +453,129 @@
     </div>
 </div>
 
-    <!-- Yoga for Mind Relaxation Section -->
-    <div class="yoga-section">
-      <div class="yoga-content">
-        <h2>Yoga poses for Mind Relaxation</h2>
-        <p>
-          Yoga is a great way to relax your mind, relieve stress, and improve
-          mental clarity.
-        </p>
-        <div class="yoga-poses">
-          <div class="yoga-item">
-            <img
-              src="https://media.istockphoto.com/id/2186939075/photo/mid-adult-woman-doing-yoga-exercise-at-home-stock-photo.jpg?s=612x612&w=0&k=20&c=ZVtplqzBzs_qc4kwkw10Ckg6-A4wuyR-34HbZZ9vJ3U="
-              alt="Meditation Pose"
-            />
-            <p>
-              Meditation Pose (Sukhasana) - Focuses on deep breathing and
-              calmness
-            </p>
-          </div>
-          <div class="yoga-item">
-            <img
-              src="https://media.istockphoto.com/id/1457610783/photo/asian-housewife-doing-childs-pose-exercise-during-home-workout-female-practicing-yoga-in.jpg?s=612x612&w=0&k=20&c=bpN6sKgJ-Jz-ltPYIXi53jZM3MRAJ2WEC8jh-lhruMM="
-              alt="Child’s Pose"
-            />
-            <p>
-              Child’s Pose (Balasana) - Relieves stress and soothes the nervous
-              system
-            </p>
-          </div>
-          <div class="yoga-item">
-            <img
-              src="https://media.istockphoto.com/id/517339050/photo/woman-relaxes-in-yoga-asana-savasana-outdoors.jpg?s=612x612&w=0&k=20&c=UupW78kTYLTTpt_UVyMI9zyIYbOnq_7SJZbv9qGnQbY="
-              alt="Corpse Pose"
-            />
-            <p>
-              Corpse Pose (Savasana) - Helps in complete relaxation and mental
-              clarity
-            </p>
-          </div>
-          <div class="yoga-item">
-            <img
-              src="https://media.istockphoto.com/id/1309835028/photo/side-view-of-a-young-man-practicing-yoga-at-home-and-doing-a-standing-forward-bend-pose.jpg?s=612x612&w=0&k=20&c=A02eivducLbcniQ0VW9W72WBcpXQ92m2896PFhijP4k="
-              alt="Forward Bend"
-            />
-            <p>
-              Standing Forward Bend (Uttanasana) - Reduces anxiety and improves
-              blood flow
-            </p>
-          </div>
-        </div>
-      </div>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: url("https://media.istockphoto.com/id/494759164/photo/yoga-with-tibetan-bell.jpg") no-repeat center/cover;
+            color:#333;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+        }
+
+        .section {
+            background: #ffffff;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .yoga-poses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .yoga-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .yoga-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .yoga-item h3 {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+
+        .yoga-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Unlock Mental Wellness</h1>
+        <p>Strengthen your mind and embrace a stress-free, balanced life.</p>
     </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Yoga Asanas for Mind Relaxation</h2>
+            <p>Practice these essential yoga poses to enhance relaxation and mental clarity.</p>
+            <div class="yoga-poses" id="yoga-poses"></div>
+        </div>
+    </div>
+
+    <script>
+        const yogaAsanas = [
+            { name: "Sukhasana (Easy Pose)", img: "Images/savasana.jpg", description: "A comfortable seated position for meditation and breath control." },
+            { name: "Balasana (Child’s Pose)", img: "https://example.com/balasana.jpg", description: "A resting pose that gently stretches the back and calms the mind." },
+            { name: "Savasana (Corpse Pose)", img: "https://example.com/savasana.jpg", description: "A relaxation pose to relieve stress and rejuvenate the body." },
+            { name: "Uttanasana (Forward Bend)", img: "https://example.com/uttanasana.jpg", description: "A pose that releases tension in the spine and increases flexibility." },
+            { name: "Bhujangasana (Cobra Pose)", img: "https://example.com/bhujangasana.jpg", description: "A gentle backbend that strengthens the spine and opens the chest." },
+            { name: "Vrikshasana (Tree Pose)", img: "https://example.com/vrikshasana.jpg", description: "A balancing pose that improves concentration and stability." },
+            { name: "Tadasana (Mountain Pose)", img: "https://example.com/tadasana.jpg", description: "A foundational pose that enhances posture and alignment." },
+            { name: "Adho Mukha Svanasana (Downward Dog)", img: "https://example.com/adho_mukha.jpg", description: "A pose that strengthens the arms and stretches the legs." },
+            { name: "Dhanurasana (Bow Pose)", img: "https://example.com/dhanurasana.jpg", description: "A backbend that strengthens the back and improves posture." },
+            { name: "Setu Bandhasana (Bridge Pose)", img: "https://example.com/setu_bandhasana.jpg", description: "A pose that stretches the chest, neck, and spine." },
+            { name: "Trikonasana (Triangle Pose)", img: "https://example.com/trikonasana.jpg", description: "A standing pose that stretches the legs and torso." },
+            { name: "Paschimottanasana (Seated Forward Bend)", img: "https://example.com/paschimottanasana.jpg", description: "A deep stretch for the spine and hamstrings." },
+            { name: "Marjariasana (Cat Pose)", img: "https://example.com/marjariasana.jpg", description: "A gentle flow between two poses that warms up the spine." }
+        ];
+
+        function loadYogaAsanas() {
+            const yogaContainer = document.getElementById("yoga-poses");
+            yogaAsanas.forEach(asana => {
+                const div = document.createElement("div");
+                div.classList.add("yoga-item");
+                div.innerHTML = `<img src="${asana.img}" alt="${asana.name}"><h3>${asana.name}</h3><p>${asana.description}</p>`;
+                yogaContainer.appendChild(div);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadYogaAsanas);
+    </script>
+
+    
+
+
+    
   </body>
 </html>
